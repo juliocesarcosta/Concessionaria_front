@@ -1,0 +1,112 @@
+/* Estilo para o formulário */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form input[type="text"],
+  form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  form button[type="submit"],
+  form button[type="button"] {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button[type="button"] {
+    background-color: #6c757d;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+.container:hover{
+  background-color: #0056b3;
+  cursor: pointer;
+}
+  
+  form button[type="button"]:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Estilo para a tabela */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  table button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  table button:hover {
+    background-color: #0056b3;
+  }
+  
+  table button:nth-child(2) {
+    background-color: #dc3545;
+  }
+  
+  table button:nth-child(2):hover {
+    background-color: #c82333;
+  }
+
+  form{
+    background-color: aquamarine;
+
+  }
+
+  h2{
+    text-align: center;
+  }
+  

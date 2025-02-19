@@ -1,0 +1,79 @@
+<h2>Lista de Clientes</h2>
+<form (ngSubmit)="onSubmit()" #clienteForm="ngForm">
+  <label for="name">Nome:</label>
+  <input
+    type="text"
+    id="name"
+    [(ngModel)]="cliente.name"
+    name="name"
+    required
+    #name="ngModel"
+  />
+  <div *ngIf="name.invalid && name.touched" class="error-message">
+    Por favor, preencha o nome.
+  </div>
+
+  <label for="phone">Telefone:</label>
+  <input
+    type="text"
+    id="phone"
+    [(ngModel)]="cliente.phone"
+    name="phone"
+    required
+    #phone="ngModel"
+  />
+  <div *ngIf="phone.invalid && phone.touched" class="error-message">
+    Por favor, preencha o telefone.
+  </div>
+
+  <label for="email">Email:</label>
+  <input
+    type="email"
+    id="email"
+    [(ngModel)]="cliente.email"
+    name="email"
+    required
+    email
+    #email="ngModel"
+    (ngModelChange)="onEmailChange()"
+  />
+  <div *ngIf="email.invalid && email.touched" class="error-message">
+    Por favor, insira um email válido.
+  </div>
+
+  <button type="submit" [disabled]="clienteForm.invalid">
+    {{ editMode ? 'Atualizar' : 'Salvar' }}
+  </button>
+  <button type="button" (click)="resetForm()">Cancelar</button>
+</form>
+
+<!-- Botão para Baixar o CSV -->
+<div>
+  <button class="container" (click)="onDownloadCSV()">Baixar CSV</button>
+</div>
+
+<!-- Tabela -->
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.name }}</td>
+      <td>{{ cliente.phone }}</td>
+      <td>{{ cliente.email }}</td>
+      <td>
+        <button (click)="onEdit(cliente)">Editar</button>
+        <button (click)="onDelete(cliente.idCliente)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
