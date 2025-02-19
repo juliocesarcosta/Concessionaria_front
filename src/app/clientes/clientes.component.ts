@@ -53,7 +53,6 @@ export class ClientesComponent {
   public resetForm() {
     this.cliente = { idCliente: 0, name: '', phone: '', email: '' };  // Limpa o formulário
     this.editMode = false;  // Desativa o modo de edição
-    alert(this.resetForm)
   }
 
   // Função chamada sempre que o email mudar
